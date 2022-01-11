@@ -1,9 +1,110 @@
 @import 'navbar';
+@import 'media-queries';
 
 
 * {
     box-sizing: border-box;
+    background: $light;
     padding: 0;
     margin: 0;
     font-family: 'kumbh sans', 'sans-serif';
+}
+
+.hero {
+    background: $light;
+
+    &__container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        justify-items: center;
+        margin: 0 auto;
+        height: 90vh;
+        z-index: 1;
+        width: 100%;
+        max-width: 1200px;
+        padding-right: 24px;
+        padding-left: 24px;
+
+        @include tablet {
+            grid-template-columns: 1fr;
+            height: 100%;
+        }
+
+        &--left {
+            width: 100%;
+            line-height: 1.2;
+
+            @include tablet {
+                padding: 5rem 0;
+
+            }
+
+            @include mobile {
+                line-height: 1.5;
+            }
+        }
+
+        &--left h1 {
+            color: $lime;
+            font-size: 4rem;
+
+            @include mobile {
+                font-size: 1.5rem;
+            }
+        }
+
+        &--left h2 {
+            color: $dark;
+            font-size: 4rem;
+            
+
+            @include mobile {
+                font-size: 2rem;
+            }
+        }
+
+        &--left p {
+            color: $dark;
+            font-size: 2rem;
+            margin-top: 1rem;
+            font-weight: 600;
+
+            @include mobile {
+                font-size: 1.5rem;
+            }
+        }
+
+        &--btn {
+            margin-top: 2rem;
+            background: $lime;
+            color: $light;
+            border: none;
+            padding: 14px 32px;
+            border-radius: 6px;
+            font-size: 1rem;
+            outline: none;
+            cursor: pointer;
+            position: relative;
+
+            &:hover {
+                background: $orgred;
+                transition: all 0.3s ease;
+
+            }
+        }
+        
+
+            
+        
+        &--right {
+        text-align: center;
+        }
+    
+        &--img {
+        height: 100%;
+        width: 100%;
+        }  
+            
+    }
 }

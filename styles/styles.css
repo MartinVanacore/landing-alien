@@ -71,11 +71,138 @@
   transition: all 0.4s ease;
 }
 
+.navbar__menu #button {
+  background: #00cc66;
+  color: #f7f7f7;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  margin-left: 16px;
+  outline: none;
+}
+
+.navbar__menu #button:hover {
+  background: #fb4b4e;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  background: #f7f7f7;
   padding: 0;
   margin: 0;
   font-family: 'kumbh sans', 'sans-serif';
+}
+
+.hero {
+  background: #f7f7f7;
+}
+
+.hero__container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-items: center;
+  margin: 0 auto;
+  height: 90vh;
+  z-index: 1;
+  width: 100%;
+  max-width: 1200px;
+  padding-right: 24px;
+  padding-left: 24px;
+}
+
+@media screen and (max-width: 768px) {
+  .hero__container {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    height: 100%;
+  }
+}
+
+.hero__container--left {
+  width: 100%;
+  line-height: 1.2;
+}
+
+@media screen and (max-width: 768px) {
+  .hero__container--left {
+    padding: 5rem 0;
+  }
+}
+
+@media screen and (max-width: 280px) {
+  .hero__container--left {
+    line-height: 1.5;
+  }
+}
+
+.hero__container--left h1 {
+  color: #00cc66;
+  font-size: 4rem;
+}
+
+@media screen and (max-width: 280px) {
+  .hero__container--left h1 {
+    font-size: 1.5rem;
+  }
+}
+
+.hero__container--left h2 {
+  color: #222121;
+  font-size: 4rem;
+}
+
+@media screen and (max-width: 280px) {
+  .hero__container--left h2 {
+    font-size: 2rem;
+  }
+}
+
+.hero__container--left p {
+  color: #222121;
+  font-size: 2rem;
+  margin-top: 1rem;
+  font-weight: 600;
+}
+
+@media screen and (max-width: 280px) {
+  .hero__container--left p {
+    font-size: 1.5rem;
+  }
+}
+
+.hero__container--btn {
+  margin-top: 2rem;
+  background: #00cc66;
+  color: #f7f7f7;
+  border: none;
+  padding: 14px 32px;
+  border-radius: 6px;
+  font-size: 1rem;
+  outline: none;
+  cursor: pointer;
+  position: relative;
+}
+
+.hero__container--btn:hover {
+  background: #fb4b4e;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.hero__container--right {
+  text-align: center;
+}
+
+.hero__container--img {
+  height: 100%;
+  width: 100%;
 }
 /*# sourceMappingURL=styles.css.map */
